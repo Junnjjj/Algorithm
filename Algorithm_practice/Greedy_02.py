@@ -5,8 +5,9 @@ data.sort()
 first = data[n-1]
 second = data[n-2]
 
-count = int(m/k)
-index = m%k
+#f k개, s 1개  m / k+1
+count = int(m/(k+1))
+index = m%(k+1)
 
 result = count*(first*k + second) + first*index
 
