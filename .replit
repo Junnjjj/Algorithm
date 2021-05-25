@@ -1,2 +1,2 @@
 language = "python3"
-run= "python3 Algorithm_practice/DFS_01.py"
+run= "python3 Algorithm_practice/BFS_02.py"
