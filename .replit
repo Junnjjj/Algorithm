@@ -1,2 +1,6 @@
 language = "python3"
+<<<<<<< HEAD
 run= "python3 Algorithm_practice/sort_example.py"
+=======
+run= "python3 Algorithm_practice/BFS_02.py"
+>>>>>>> a5d29a509f11525e80ba055761843621790cdeaa

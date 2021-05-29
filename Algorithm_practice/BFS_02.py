@@ -36,7 +36,10 @@ def bfs(x, y):
 
   return graph[n-1][m-1]
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> a5d29a509f11525e80ba055761843621790cdeaa
 print(bfs(0,0))
       
