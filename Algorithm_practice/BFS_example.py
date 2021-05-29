@@ -16,7 +16,8 @@ def bfs(graph, start, visited):
       if not visited[i]:
         queue.append(i)
         visited[i] = True
-  
+
+
 #각 노드가 연결된 정보를 리스트 자료형으로 표현(2차원 리스트)
 graph = [
   [],
