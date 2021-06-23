@@ -73,3 +73,17 @@ def quick_sort2(array):
   return quick_sort2(left_side) + [pivot] + quick_sort2(right_side)
 
 print(quick_sort2(array))
+
+
+#계수정렬, count sort
+array = [7,5,9,0,3,1,6,2,9,1,4,8,0,5,2]
+
+#모든 범위를 포함하는 리스트 선언
+count = [0] * (max(array) + 1)
+
+for i in range(len(array)):
+  count[array[i]] += 1
+
+for i in range(len(count)):
+  for j in range(count[i]):
+    print(i , end=' ')
