@@ -1,3 +1,7 @@
 
 language = "python3"
+<<<<<<< HEAD
 run= "python3 Algorithm_practice/DynamicProgramming.py" 
+=======
+run= "python3 Algorithm_practice/Binary_Serach3.py" 
+>>>>>>> 7865fd697def7992c4979f2986ddd5bc7f189310
