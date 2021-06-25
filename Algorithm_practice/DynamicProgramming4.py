@@ -8,8 +8,7 @@ for i in range(n):
   array.append(int(input()))
 
 #M을 array로 만들 수 있는 최소 개수
-
-d = [0] * 100
+hord = [0] * 100
 
 #array 에 있는 동전 수 횟수에 더하기
 for i in array:
