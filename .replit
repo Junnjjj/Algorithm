@@ -1,4 +1,4 @@
 
 language = "python3"
+<<<<<<< HEAD
 run= "python3 Algorithm_practice/ShortestPath4.py" 
-
