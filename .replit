@@ -1,4 +1,3 @@
 
 language = "python3"
-run= "python3 Algorithm_practice/ShortestPath4.py" 
-
+run= "python3 Algorithm_practice/Graph2.py" 
