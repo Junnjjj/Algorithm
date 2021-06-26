@@ -1,3 +1,5 @@
 
 language = "python3"
+<<<<<<< HEAD
 run= "python3 Algorithm_practice/Graph2.py" 
+
