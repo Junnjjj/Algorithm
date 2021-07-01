@@ -1,4 +1,8 @@
 
 language = "python3"
+<<<<<<< HEAD
 run= "python3 Sample_Question/Greedy/03.py" 
+=======
+run= "python3 Sample_Question/Greedy/02.py" 
+>>>>>>> 13fa82bfc09f2675067f27566974ed4547b9216b
 
