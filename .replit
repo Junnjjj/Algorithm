@@ -1,4 +1,2 @@
-
 language = "python3"
-run= "python3 Sample_Question/Greedy/03.py" 
-
+run= "python3 Sample_Question/Greedy/06.py" 
