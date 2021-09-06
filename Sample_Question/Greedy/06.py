@@ -5,25 +5,32 @@ foodTimes = list(map(int, input().split()))
 k = int(input())
 
 def solution(food_times, k):
-  if sum(food_times) <= k:
-    return -1
+  n = len(food_times)
+  cycle = k // n #첫번째 사이클
+  mCycle = cycle
+  index = 0
+  count = 0
 
-  q = []
-  for i in range(len(food_times)):
-    heapq.heappush(q, (food_times[i], i+1))
+  while True:
+    food_times = list(map(lambda x : x-mCycle, food_times)) #food time update
 
-  sum_value = 0
-  previous = 0
+    minus = sum(list(filter(lambda x : x<0, food_times))) #음수 값
+    index = (n * cycle) + minus #지나간 음류수
+    count = len(list(filter(lambda x : x>0, food_times))) #양수의 개수
+    mCycle = (k - index) // count
 
-  length = len(food_times)
+    cycle += mCycle
+    if (k-index) <= count: break
+    
+  answer = 0   
+  for x in range(len(food_times)):
+    answer +=1
+    if food_times[x] > 0:
+      count -= 1
+      if count == 0: break
+      
+  return answer
 
-  while sum_value + ((q[0][0] - previous) * length) <= k:
-    now = heapq.heappop(q)[0]
-    sum_value += (now-previous) * length
-    length -= 1
-    previous = now
 
-  result = sorted(q, key = lambda x: x[1])
-  return result[(k-sum_value) % length][1]
 
 print(solution(foodTimes, k))

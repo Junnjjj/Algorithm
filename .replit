@@ -1,11 +1,2 @@
 language = "python3"
-<<<<<<< HEAD
-run= "python3 Sample_Question/Greedy/06.py" 
-=======
-<<<<<<< HEAD
-run= "python3 Sample_Question/Greedy/03.py" 
-=======
-run= "python3 Sample_Question/Greedy/02.py" 
->>>>>>> 13fa82bfc09f2675067f27566974ed4547b9216b
-
->>>>>>> 0c3d954b8ee4a158c2eda51400000fd18aa5a5d2
+run= "python3 Sample_Question/Implementation/test.py" 
