@@ -1,4 +1,6 @@
-n = int(input())
+import sys
+
+n = int(sys.stdin.readline())
 
 def solution(data):
 
@@ -9,13 +11,13 @@ def solution(data):
 
   left_side = [x for x in tail if x <= pivot]
   right_side = [x for x in tail if x > pivot]
-
+  
   return solution(left_side) + [pivot] + solution(right_side)
 
-data = []
-for _ in range(n):
-  data.append(input())
 
-sortedResult = dict.fromkeys(solution(result))
-result = list(sortedResult)
-print("\n".join(result))
+data = [int(sys.stdin.readline().strip()) for _ in range(n)]
+
+result = solution(data)
+
+for i in range(len(result)):
+  print(result[i])
