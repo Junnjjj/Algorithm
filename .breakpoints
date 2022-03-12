@@ -4,30 +4,22 @@
       {
         "id": "09ea1947-25ac-4be4-9a71-0660a47b9e52",
         "line": 64,
-        "version": 1247,
-        "index": 1327
-      }
-    ],
-    "Sample_Question/DFS/1987.py": [
-      {
-        "id": "81afe2f7-a02e-4328-ac5d-f7dfea5d2a74",
-        "line": 30,
-        "version": 2707,
-        "index": 614
+        "version": 1,
+        "index": 1320
       }
     ],
     "Sample_Question/DFS/2644.py": [
       {
         "id": "95b8f3ac-e931-40a4-be8b-6b511bf91b70",
         "line": 29,
-        "version": 1149,
+        "version": 1,
         "index": 537
       },
       {
         "id": "a00ccd3a-7b40-4ef7-937a-6aaa48a89588",
         "line": 36,
-        "version": 1149,
-        "index": 646
+        "version": 1,
+        "index": 648
       }
     ]
   }

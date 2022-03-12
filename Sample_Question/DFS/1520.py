@@ -55,3 +55,13 @@ a = [list(map(int, input().split())) for _ in range(m)]
 dp = [[-1] * n for i in range(m)]
 
 print(dfs(m-1,n-1))
+
+dp = [[0] * n for i in range(m)]
+move = [(-1,0), (1,0), (0,-1), (0,1)]
+def dfs(x, y):
+
+  if dp[x][y] != 1: # 이미 방문 했다면 
+    return 
+  if x == 0 and y == 0: # 목적지 까지 도달했을 때
+    return 1
+
