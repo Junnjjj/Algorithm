@@ -21,6 +21,14 @@
         "version": 1,
         "index": 648
       }
+    ],
+    "Sample_Question/Implementation/9935.py": [
+      {
+        "id": "0fc0b731-9c9b-4f3b-926a-f33e965da7d5",
+        "line": 24,
+        "version": 1381,
+        "index": 385
+      }
     ]
   }
 }
