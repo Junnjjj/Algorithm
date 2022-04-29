@@ -17,11 +17,7 @@ def solution(n, k, cmd):
     deleteQ = deque()
     cur = k
     
-    for c in cmd:        
-        # if len(c) > 1:
-        #     c,moveState = c.split(' ')
-        #     moveState= int(moveState)  
-            
+    for c in cmd:                            
         if len(c) > 1:
             c, move_size = c.split(' ')
             moveState = int(move_size)    
@@ -33,36 +29,22 @@ def solution(n, k, cmd):
             for m in range(moveState):
                 cur = node_list[cur].next
         elif c == 'C':
-#             node_list[cur].check = True
-#             deleteQ.append(cur)
+            node_list[cur].check = True
+            deleteQ.append(cur)
             
-#             prev_node = node_list[cur].prev
-#             next_node = node_list[cur].next
+            prev_node = node_list[cur].prev
+            next_node = node_list[cur].next
             
-            # if next_node == -1: # 마지막 행일 경우
-            #     cur = prev_node
-            #     node_list[cur].next = -1
-            # elif prev_node == -1: # 첫 행일 경우
-            #     cur = next_node
-            #     node_list[cur].prev= -1
-            # else: # 중간에 있을 경우
-            #     cur = next_node
-            #     node_list[prev_node].next = cur
-            #     node_list[cur].prev = prev_node
-            
-            node_list[cur].check = True # 현재 노드에 삭제 표시
-            deleteQ.append(cur) # 스택에 삭제된 노드 번호 추가
- 
-            prev_node = node_list[cur].prev # 이전 노드 번호
-            next_node = node_list[cur].next # 다음 노드 번호
- 
-            if prev_node != -1: # 이전 노드가 있는 경우
-                node_list[prev_node].next = next_node # 이전 노드의 next를 삭제된 노드가 가리키던 next로 교체
-            if next_node != -1: # 다음 노드가 있는 경우
-                node_list[next_node].prev = prev_node # 다음 노드의 prev를 삭제된 노드가 가리키던 prev로 교체
-                cur = next_node # 가리키고 있는 노드를 next_node로 갱신
-            else: # 만약 다음 노드가 없는 경우
-                cur = prev_node # 가리키고 있는 노드를 prev_node로 갱신
+            if next_node == -1: # 마지막 행일 경우
+                cur = prev_node
+                node_list[cur].next = -1
+            elif prev_node == -1: # 첫 행일 경우
+                cur = next_node
+                node_list[cur].prev= -1
+            else: # 중간에 있을 경우
+                cur = next_node
+                node_list[prev_node].next = cur
+                node_list[cur].prev = prev_node            
             
         elif c == 'Z': # Z일 경우
             del_node = deleteQ.pop()
