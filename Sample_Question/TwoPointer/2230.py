@@ -24,7 +24,7 @@ nums = []
 for _ in range(n):
   nums.append(int(input()))
 
-nums = sorted(nums)
+nums.sort()
 result = twoPointer(nums,n,m)
 print(result)
 
