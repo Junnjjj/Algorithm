@@ -15,8 +15,7 @@ def solution(w,k):
   min_str,max_str = 1e9, 0
   for idx_lst in alpha.values():
     for j in range(len(idx_lst) - K + 1):
-      temp = idx_lst[j+K-1] - idx_lst[j] + 1
-      print(temp)
+      temp = idx_lst[j+K-1] - idx_lst[j] + 1      
 
       if temp < min_str: 
         min_str = temp 
