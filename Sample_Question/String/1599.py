@@ -5,7 +5,7 @@ minsik = 'a b k d e g h i l m n ng o p r s t u w y'
 minsik = minsik.split(' ')
 minsik_dict = {k:v for v,k in enumerate(minsik)}
 
-def solution(word_lst, size):  
+def solution(word_lst):  
 
   change_to_num = []
   for idx,word in enumerate(word_lst):
@@ -35,8 +35,7 @@ strings = []
 n = int(input())
 maxLen = 0
 for _ in range(n):
-  string = str(input().rstrip())
-  maxLen = max(len(string), maxLen)
+  string = str(input().rstrip())  
   strings.append(string)
 
 solution(strings, maxLen)
