@@ -1,2 +1,2 @@
 language = "python3"
-run = "python Sample_Question/String2/20437.py"
+run = "python Sample_Question/Binary/2412.py"

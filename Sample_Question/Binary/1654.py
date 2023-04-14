@@ -1,28 +1,28 @@
 import sys
 input = sys.stdin.readline
 
-k,n = map(int,input().split())
-lines = [int(input()) for _ in range(k)]
+n,k = map(int,input().split())
+data = [int(input()) for _ in range(n)]
 
-left = 1
-right = max(lines)
-mid = (left+right)//2
+data.sort()
+start = 1
+end = data[-1]
 
-answer = 0
-count = len(lines)
-while left <= right:
-  temp = 0
- 
-  for line in lines:
-    temp += (line // mid)
+while start <= end:
+    mid = (start + end) // 2
+    lines = 0 
+    for i in data:
+        lines += i // mid
+        
+    if lines >= k:
+        start = mid + 1
+    else:
+        end = mid - 1
+print(end)
 
-  if temp >= n:
-    answer = max(answer,mid)
-    left = mid + 1
-    mid = (left + right) // 2
-  elif temp < n:
-    right = mid - 1
-    mid = (left + right) // 2
 
-print(answer)
-# 최대값 
+# 4 11
+# 802
+# 743
+# 457
+# 539
