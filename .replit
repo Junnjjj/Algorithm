@@ -1,2 +1,3 @@
 language = "python3"
-run = "python Sample_Question/Binary/18114.py"
+# run = "python Sample_Question/Binary/18114.py"
+run ="python temp.py"
