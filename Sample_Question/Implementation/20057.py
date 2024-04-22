@@ -13,7 +13,7 @@ def spread_sand(r,c,dir):
 	global answer
 	nowSand = data[r][c]
 	if nowSand == 0: return
-	
+
 	go = move[dir]
 	opposite = move[dir + 2] if dir <= 1 else move[dir - 2]
 	up = 3 if dir == 0 or dir == 2 else 2 # 위, 오른쪽 
@@ -30,7 +30,7 @@ def spread_sand(r,c,dir):
 			answer += sand
 		else:
 			data[x][y] += sand
-	
+
 	for dx,dy in (move[up],move[down]):
 		# 위 dir : 10%
 		x,y = r+dx+go[0], c+dy+go[1]
@@ -42,7 +42,7 @@ def spread_sand(r,c,dir):
 			else: # 모래양 더함
 				data[x][y] += sand
 		else: continue # 0보다 작으면 밑에도 다 0보다 작음 볼필요도 없음
-			
+
 		# 바로 위 : 7 %
 		x,y = r+dx, c+dy	
 		sand = int(nowSand * 0.07)
@@ -53,7 +53,7 @@ def spread_sand(r,c,dir):
 			else: # 모래양 더함
 				data[x][y] += sand
 		else: continue
-			
+
 		# 위 위 : 2 %
 		x,y = r+(2*dx), c+(2*dy)
 		sand = int(nowSand * 0.02)
@@ -63,7 +63,7 @@ def spread_sand(r,c,dir):
 				answer += sand
 			else: # 모래양 더함
 				data[x][y] += sand
-				
+
 		# 위 opposite : 1%
 		x,y = r+dx+opposite[0], c+dy+opposite[1]
 		sand = int(nowSand * 0.01)
@@ -80,7 +80,7 @@ def spread_sand(r,c,dir):
 		answer += aSand
 	else:
 		data[x][y] += aSand
- 
+
 def tornado():
 	# 중앙에서부터 빙빙 돌아서 0,0 까지 도착
 	# 왼쪽, 아래, 오른쪽, 위	
@@ -95,21 +95,21 @@ def tornado():
 	global answer
 	while True:
 		# print(dx,dy) # 이전칸 출력
-		
+
 		spread_sand(dx,dy,dir)
 		if dx == 0 and dy == 0: break
-			
+
 		if temp == lenght:
 			dir = (dir + 1) % 4
 			temp = 1
 			if dir == 2 or dir == 0:
 				lenght += 1
-		
+
 		nx,ny = move[dir][0], move[dir][1]
 		dx,dy = dx+nx, dy+ny # 한칸 이동
 		temp += 1			
 
-	
+
 
 def solution():
 	global answer
