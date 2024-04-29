@@ -29,7 +29,7 @@ def step1(robot_idxs):
 			heapq.heappush(temp_heap, (rCnt, rIdx))
 			robot_exist[rIdx] = True
 	robot_idxs = temp_heap
-			
+
 	return robot_idxs
 
 def step2(robot_idxs):
@@ -58,7 +58,7 @@ def step2(robot_idxs):
 			heapq.heappush(temp_heap,(rCnt,rIdx))
 
 	return temp_heap # robot_idxs
-		
+
 
 def step3(robot_idxs):
 	# 0 위치에 로봇 올림	
@@ -68,7 +68,7 @@ def step3(robot_idxs):
 		heapq.heappush(robot_idxs,(robot_cnt,0))
 		q[0] -= 1
 		robot_exist[0] = True
-		
+
 	return robot_idxs
 
 def step4(k):
@@ -80,7 +80,7 @@ def step4(k):
 
 	if count >= k:
 		return True
-		
+
 	return False
 
 def solution():
