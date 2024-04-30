@@ -64,11 +64,11 @@ def find_position(student_infos):
 					dx,dy = i+nx,j+ny
 					if 0<=dx<n and 0<=dy<n and board[dx][dy] in friends:
 						friends_cnt += 1
-						
+
 				if friends_cnt > 0:
 					max_friend = max(max_friend, friends_cnt)
 					heapq.heappush(friends_heap, (friends_cnt*-1,i,j))
-										
+
 			# 여러개라면, 인접한 칸 중 가장 많은 칸
 
 			# 행의 번호가 가장 작은칸, 열의번호가 가장 작은칸
@@ -87,7 +87,7 @@ def find_position(student_infos):
 	else: # 주변에 친구가 없다면, 비어있는칸이 여러개면, 인접한 칸중 가장 많으칸
 		q_empty.sort(key=lambda x: (x[0]*-1, x[1], x[2]))
 		nextR,nextC = q_empty[0][1], q_empty[0][2]
-		
+
 	board[nextR][nextC] = student_number
 	check_empty_board()
 
@@ -97,13 +97,13 @@ def check_pos():
 		for j in range(n):
 			count = 0
 			center = board[i][j]
-			
+
 			for nx,ny in move:
 				dx,dy = i+nx,j+ny
 
 				if 0<=dx<n and 0<=dy<n and board[dx][dy] in board_dict[center]:
 					count += 1
-			
+
 			if count == 1:
 				result += 1
 			elif count == 2:
@@ -114,13 +114,13 @@ def check_pos():
 				result += 1000
 
 	return result
-		
-			
+
+
 
 def solution():
 	for d in data:
 		find_position(d)
-	
+
 	answer = check_pos()	
 
 	print(answer)
