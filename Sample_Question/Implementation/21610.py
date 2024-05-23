@@ -20,7 +20,7 @@ def rain_hope(clouds, di,si):
 
 		dx = x + dirs[di][0]*si
 		dy = y + dirs[di][1]*si
-		
+
 		if dx >= 0:
 			dx = dx % n
 		else:
@@ -32,7 +32,7 @@ def rain_hope(clouds, di,si):
 		else:
 			while dy < 0:
 				dy += n
-		
+
 
 		# 5,6,7,8,9 => 0,1,2,3,4 => % n
 		# -5,-4,-3,-2,-1 => 0,1,2,3,4
@@ -56,9 +56,9 @@ def rain_hope(clouds, di,si):
 
 				if 0 <= nx < n and 0 <= ny < n and data[nx][ny] > 0:
 					basket += 1
-	
+
 		data[x][y] += basket			
-				
+
 
 	# 바구니에 저장된 물의 양이 2 이상인 모든 칸에 구름이 생기고, 물의 양이 2 줄어든다. 이때 구름이 생기는 칸은 3에서 구름이 사라진 칸이 아니어야 한다.
 	newClouds = []
@@ -81,8 +81,8 @@ def solution():
 	answer = 0
 	for row in data:
 		answer += sum(row)
-		
+
 	print(answer)
-		
-	
+
+
 solution()
